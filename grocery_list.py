@@ -1,6 +1,6 @@
 import requests
 import os
-import openai
+from openai import OpenAI
 import json
 import sqlite3
 from dotenv import load_dotenv
@@ -8,6 +8,8 @@ import logging
 
 # Load environment variables
 load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Set up logging
 log_level = os.getenv('LOG_LEVEL', 'INFO')
@@ -19,7 +21,6 @@ DATABASE_PATH = os.getenv('DATABASE_PATH', './database/food_data.db')
 BACKEND_URL = os.getenv('BACKEND_URL', 'https://backflipp.wishabi.com/flipp/items/search')
 
 # Set OpenAI API key from environment variables
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Debug mode
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
@@ -41,54 +42,52 @@ class GroceryPriceFinder:
         return None
 
     def parse_grocery_list(self):
-        response = openai.ChatCompletion.create(
-            model="gpt-4o-mini",  # This is valid, don't change it.
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are a helpful assistant that parses grocery lists into structured data. "
-                        "For each item, provide: \n"
-                        "1. name: The main item name\n"
-                        "2. brand: Brand name if specified, otherwise null\n"
-                        "3. type: Any specific type or variety\n"
-                        "4. quantity: Any quantity information\n"
-                        "5. notes: Any additional notes or preferences"
-                    ),
-                },
-                {
-                    "role": "user",
-                    "content": f"Parse the following grocery list into structured data:\n{self.grocery_list}\nReturn the data as a JSON array of objects."
-                }
-            ],
-            functions=[
-                {
-                    "name": "clarify_grocery_list",
-                    "description": "Clarify and structure each item in the grocery list",
-                    "parameters": {
-                        "type": "object",
-                        "properties": {
+        response = client.chat.completions.create(model="gpt-4o-mini",  # This is valid, don't change it.
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a helpful assistant that parses grocery lists into structured data. "
+                    "For each item, provide: \n"
+                    "1. name: The main item name\n"
+                    "2. brand: Brand name if specified, otherwise null\n"
+                    "3. type: Any specific type or variety\n"
+                    "4. quantity: Any quantity information\n"
+                    "5. notes: Any additional notes or preferences"
+                ),
+            },
+            {
+                "role": "user",
+                "content": f"Parse the following grocery list into structured data:\n{self.grocery_list}\nReturn the data as a JSON array of objects."
+            }
+        ],
+        functions=[
+            {
+                "name": "clarify_grocery_list",
+                "description": "Clarify and structure each item in the grocery list",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "items": {
+                            "type": "array",
                             "items": {
-                                "type": "array",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "name": {"type": "string", "description": "The main name of the grocery item"},
-                                        "brand": {"type": "string", "description": "The brand of the item, if specified"},
-                                        "type": {"type": "string", "description": "The type or variation of the item"},
-                                        "quantity": {"type": "string", "description": "The quantity or size of the item"},
-                                        "notes": {"type": "string", "description": "Any additional notes or preferences"}
-                                    },
-                                    "required": ["name"]
-                                }
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string", "description": "The main name of the grocery item"},
+                                    "brand": {"type": "string", "description": "The brand of the item, if specified"},
+                                    "type": {"type": "string", "description": "The type or variation of the item"},
+                                    "quantity": {"type": "string", "description": "The quantity or size of the item"},
+                                    "notes": {"type": "string", "description": "Any additional notes or preferences"}
+                                },
+                                "required": ["name"]
                             }
-                        },
-                        "required": ["items"]
-                    }
+                        }
+                    },
+                    "required": ["items"]
                 }
-            ],
-            function_call={"name": "clarify_grocery_list"}
-        )
+            }
+        ],
+        function_call={"name": "clarify_grocery_list"})
 
         # Extract the function call result
         function_call = response.choices[0].message.function_call
