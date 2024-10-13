@@ -13,42 +13,48 @@ The Food Database is created using data from USDA FoodData Central and includes 
 #### **Food Database Creation Process**
 
 1. **Data Download**
+
    - Download CSV files from USDA FoodData Central.
    - Place these files in the `database/source_data` directory.
 
 2. **Database Initialization** (`db_builder.py`)
+
    - Deletes the existing `food_data.db` if present.
    - Calls functions from `create_db.py` to set up the new database.
 
 3. **Table Creation** (`create_db.py`)
+
    - Creates tables such as `branded_food`, `food`, `food_nutrient`, `nutrient`, `food_attribute`, and `measure_unit`.
    - Establishes relationships and indexes for optimization.
 
 4. **Data Loading** (`create_db.py`)
+
    - Reads each CSV file using pandas.
    - Cleans and processes data (e.g., handling numeric columns).
    - Loads data into respective tables.
 
 5. **Query Examples** (`query_examples.py`)
+
    - Provides sample queries to demonstrate database usage, including complex joins, filtering, and aggregations.
 
 #### **Database Schema**
 
 The database contains the following tables:
 
-1. **branded_food**: Information on branded food items, including brand owner, UPC, serving size, ingredients, and market details.
+1. **branded\_food**: Information on branded food items, including brand owner, UPC, serving size, ingredients, and market details.
 2. **food**: General information about food items, including a description and category ID.
-3. **food_attribute**: Attributes such as nutrient updates or ingredient details.
-4. **food_nutrient**: Information about nutrients present in each food item, such as nutrient amount.
+3. **food\_attribute**: Attributes such as nutrient updates or ingredient details.
+4. **food\_nutrient**: Information about nutrients present in each food item, such as nutrient amount.
 5. **nutrient**: Nutrients like protein, fat, vitamins, and their units of measurement.
-6. **measure_unit**: Measurement units like cups, tablespoons, etc.
+6. **measure\_unit**: Measurement units like cups, tablespoons, etc.
 
 Relationships between tables are established via keys such as `fdc_id` and `nutrient_id`. A detailed explanation can be found in `documentation/database_schema.md`.
 
 #### **Setup Instructions**
 
 1. **Download the USDA CSV Files**
-   - Visit: <https://fdc.nal.usda.gov/download-datasets.html>
+
+   - Visit: [https://fdc.nal.usda.gov/download-datasets.html](https://fdc.nal.usda.gov/download-datasets.html)
    - Download: `branded_food.csv`, `food.csv`, `food_attribute.csv`, `food_nutrient.csv`, `nutrient.csv`, `measure_unit.csv`.
    - Place files in the `database/source_data` directory.
 
@@ -66,6 +72,8 @@ Relationships between tables are established via keys such as `fdc_id` and `nutr
    python database/query_examples.py
    ```
 
+   This script provides sample outputs that demonstrate the structure of the data and common use cases, including details like nutrient information and product descriptions.
+
 ### 2. Grocery Price Finder
 
 The Grocery Price Finder helps users find the cheapest grocery items by parsing a free-form grocery list, expanding item information, and querying a backend API for prices.
@@ -73,34 +81,43 @@ The Grocery Price Finder helps users find the cheapest grocery items by parsing 
 #### **Process Overview**
 
 1. **User Input**
+
    - The user provides a ZIP code and a grocery list.
 
 2. **List Parsing** (`grocery_list.py`)
+
    - Uses OpenAI API to parse the free-form list into structured data, extracting item details such as name, brand, type, quantity, and category.
 
 3. **Item Information Expansion**
+
    - Queries the local food database to expand item information, adding details like ingredients and serving sizes.
 
 4. **Query Building**
+
    - Constructs search queries for each item using the parsed and expanded information.
 
 5. **Price Search**
+
    - Sends queries to the backend API (Flipp) with the user's ZIP code.
    - Retrieves matching items from various stores.
 
 6. **Price Analysis**
+
    - Parses price and unit size for each result, normalizes prices (e.g., price per ounce), and identifies the cheapest option matching the original item.
    - Tracks alternative items for suggestions.
 
 7. **Results Compilation**
+
    - Compiles information for each grocery item, including the best match, stores searched, number of matches, and alternative items.
 
 8. **Output**
+
    - Provides formatted results, including matched item details, search queries, stores searched, and alternative items.
 
 ### How to Use the Grocery Price Finder
 
 1. **Set Up Environment Variables**
+
    - Copy `.env.example` to `.env` and fill in your OpenAI API key and other required variables.
    - Update `.env` with your ZIP code if you want to avoid entering it each time you run the Grocery Price Finder.
 
@@ -119,13 +136,7 @@ The Grocery Price Finder helps users find the cheapest grocery items by parsing 
 - Normalizes prices for easy comparison.
 - Provides alternative options when exact matches aren't found.
 - Leverages a comprehensive food database with nutrient information.
-
-## Future Improvements
-
-- Enhance natural language processing for better grocery list parsing and query building.
-- Improve the matching algorithm for handling product variations.
-- Integrate additional price comparison APIs.
-- Expand the food database with more nutrition and food data sources.
+- **Sample Data Outputs**: The system outputs example data, including ingredient lists and serving sizes, to help users understand the type of information stored and retrieved.
 
 ## Contributing
 
