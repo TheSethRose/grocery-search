@@ -3,7 +3,7 @@
 .env.local
 
 # Virtual environment
-.venv
+.venv/
 venv/
 ENV/
 
@@ -15,25 +15,11 @@ __pycache__/
 # SQLite database files
 *.db
 *.sqlite3
-./database/food_data.db
+database/food_data.db
 
-# Source data
-./database/source_data/
-./database/source_data/*.csv
-./database/source_data/*.xlsx
-
-# Specific source data files
-./database/source_data/Download API Field Descriptions.xlsx
-./database/source_data/branded_food.csv
-./database/source_data/food.csv
-./database/source_data/food_attribute.csv
-./database/source_data/food_attribute_type.csv
-./database/source_data/food_nutrient.csv
-./database/source_data/food_update_log_entry.csv
-./database/source_data/measure_unit.csv
-./database/source_data/microbe.csv
-./database/source_data/nutrient.csv
-./database/source_data/nutrient_incoming_name.csv
+# Ignore all files inside source_data but keep the directory
+database/source_data/*
+!database/source_data/.gitkeep
 
 # Logs
 *.log
