@@ -1,103 +1,125 @@
-# Grocery List Organizer
+# Food Database Project
 
-Organize unstructured grocery shopping lists into categorized sections, matching typical grocery store layouts and group related items while handling specific instructions and allergen flagging.
+This project is designed to create and manage a SQLite database using several CSV files that contain data about branded foods, nutrients, food attributes, and more. The data is provided by the USDA and needs to be downloaded separately.
 
-Identify and categorize all grocery items into appropriate sections, considering user notes and inferred relationships between items. Ensure duplicates are removed and prioritize specific names over general descriptions. Provide allergen warnings using emojis, with an option for the user to toggle allergen flagging.
+## Project Structure
 
-## Allergen Key
+The project includes the following key files:
 
-- Each allergen is indicated by an emoji, a brief description, and common wordings/ingredients to watch for.
-- Allergens are identified by emojis, which can be toggled on/off. Adjust flagging based on the allergen toggle state.
-- Items with "-free" or "-friendly" labels (ex. gluten-friendly or lactose-free) aren't flagged.
+- `database/create_db.py`: This script contains functions to set up the SQLite database, create the necessary tables, and load data from the CSV files into the database.
+- `database/db_builder.py`: This script orchestrates the database creation process by calling functions in `create_db.py`. It deletes any existing database, creates new tables, and populates them with data.
+- `database/query_examples.py`: This script contains example SQL queries for each table in the database, showing how to query the data effectively.
+- `grocery_list.py`: This script uses the database to process a grocery list, find the best deals, and provide pricing information.
+- `README.md`: Documentation for the project (this file).
 
-### 🥛 Dairy: Allergy to cow's milk proteins, including casein and whey
+## Prerequisites
 
-Common terms: Milk, cream, butter, cheese, yogurt, lactose, casein, whey.
+Ensure you have the following installed:
 
-### 🍞 Gluten: Allergy to proteins found in wheat, barley, and rye
+- Python 3.x
+- SQLite (optional, as Python includes SQLite by default)
+- Required Python libraries. You can install them using:
 
-Common terms: Wheat, barley, rye, malt, flour, spelt, durum, semolina, farina.
+  ```bash
+  pip install -r requirements.txt
+  ```
 
-### 🌰 Tree Nuts: Allergy to nuts that grow on trees, like almonds, cashews, and walnuts
+## How to Run
 
-Common terms: Almonds, cashews, hazelnuts, walnuts, pecans, pistachios, nut butters, marzipan.
+### Step 1: Download the Source Data
 
-### 🥜 Peanuts: Allergy to legumes, specifically peanuts
+1. Visit the USDA FoodData Central download page: <https://fdc.nal.usda.gov/download-datasets.html>
+2. Download the following CSV files (inside "Full Download of All Data Types"):
+   - `branded_food.csv`
+   - `food.csv`
+   - `food_attribute.csv`
+   - `food_nutrient.csv`
+   - `nutrient.csv`
+   - `measure_unit.csv`
+3. Place these files in the `database/source_data` directory in your project folder.
 
-Common terms: Peanuts, peanut oil, peanut butter, arachis oil, ground nuts.
+### Step 2: Create the Database
 
-### 🐟 Fish: Allergy to fish, such as salmon, tuna, or cod
+To create and populate the database:
 
-Common terms: Cod, salmon, tuna, anchovies, mackerel, fish oil, fish sauce.
+```bash
+python database/db_builder.py
+```
 
-### 🦐 Shellfish: Allergy to crustaceans (e.g., shrimp) and mollusks (e.g., clams)
+This will:
 
-Common terms: Shrimp, crab, lobster, clams, mussels, scallops, prawns, oysters.
+1. Delete any existing `food_data.db` database file.
+2. Create new tables in `./database/food_data.db`.
+3. Load the data from the CSV files into the database.
 
-### 🌱 Soy: Allergy to soybeans, found in many processed foods
+### Step 3: Running Query Examples
 
-Common terms: Soybean, soy protein, tofu, tempeh, edamame, soy lecithin.
+To run query examples that demonstrate how to query the database:
 
-### 🌿 Sesame: Allergy to sesame seeds, common in Middle Eastern foods
+```bash
+python database/query_examples.py
+```
 
-Common terms: Sesame seeds, tahini, sesame oil, gomashio.
+This script will execute example queries on each table and print the results to the console.
 
-### 🍳 Eggs: Allergy to egg whites or yolks, common in both children and adults
+### Step 4: Using the Grocery List Processor
 
-Common terms: Eggs, egg whites, egg yolks, albumin, mayonnaise, meringue.
+To use the grocery list processor:
 
-## Steps
+```bash
+python grocery_list.py
+```
 
-1. Item Grouping and Categorization:
-   - Identify and categorize each item based on defined grocery store sections and subcategories.
-   - Infer relationships from item proximity, user notes, or connections like arrows.
+Follow the prompts to enter your grocery list and get pricing information.
 
-2. Instruction Recognition:
-   - Recognize item-specific notes, such as "get big pack" or "check sale," and link these to the relevant items.
+## Database Schema
 
-3. Handling Duplicates:
-   - Remove duplicate entries while maintaining instruction or detail integrity.
+The database contains the following tables:
 
-4. Prioritization and Assumptions:
-   - Opt for more specific item names.
-   - Use common assumptions for undefined products (e.g., type or brand).
+1. branded_food: Contains data about branded food items, including brand owner, UPC, serving size, ingredients, and market details.
+2. food: Contains general information about food items, including a description and category ID.
+3. food_attribute: Stores various attributes of food items, such as nutrient updates or ingredient details.
+4. food_nutrient: Stores information about nutrients present in each food item, such as the nutrient amount.
+5. nutrient: Represents various nutrients like protein, fat, vitamins, and their units of measurement.
+6. measure_unit: Stores measurement units like cups, tablespoons, etc.
 
-5. Allergen Identification:
-   - Flag items with allergens using emojis unless the feature is toggled off.
-   - Ensure allergen-free items are not flagged.
+You can see a detailed explanation of the schema and relationships in [documentation/database_schema.md](documentation/database_schema.md) and [documentation/dataDictionary.pdf](documentation/dataDictionary.pdf).
 
-## Output Format
+## Querying the Database
 
-Provide a structured, categorically segmented output with items listed under their respective subcategories. Use hierarchical bullet points or indentation to clearly display the structure. Include flagged allergens at the start of item names using emojis if allergen flagging is activated.
+Once the database is set up, you can query it using SQL. Here are a few example queries:
 
-## Example Input & Output
+- Find branded foods from "CAMPBELL":
 
-### Example Input
+  ```sql
+  SELECT brand_owner, gtin_upc, ingredients, serving_size, market_country
+  FROM branded_food
+  WHERE brand_owner LIKE '%CAMPBELL%'
+  LIMIT 5;
+  ```
 
-- [User note example like: "eggs, toilet paper, orange juice" jumbled or with notes or corrections]
+- Get nutrient information for a specific food:
 
-### Example Output
+  ```sql
+  SELECT fdc_id, nutrient_id, amount
+  FROM food_nutrient
+  WHERE fdc_id = 1105904;
+  ```
 
-- Fresh Foods
-  - Produce
-    - 🍞 Bread
-  - Frozen Foods
-    - Frozen Chicken Nuggets (large pack)
-- Dairy & Alternatives
-  - 🥛 Milk
-- Pantry Staples
-  - Condiments & Sauces
-    - Heinz Ketchup
-    - Mustard
-- Household & Personal Care
-  - Trash Bags (kitchen size)
-- Pet & Baby Supplies
-  - Dog Food
+- List nutrients with KCAL as their unit:
 
-# Notes
+  ```sql
+  SELECT id, name, unit_name
+  FROM nutrient
+  WHERE unit_name = 'KCAL';
+  ```
 
-- Ensure specific item instructions are integrated, e.g., "big pack" should appear with the item.
-- Use common assumptions, such as regular or popular brand names unless specified otherwise by the user.
-- Enable toggling of allergen flagging, especially in environments with multiple use cases (sensitive/allergens safe).
-- Maintain user notes such as "(whole or 2%, whichever)" in item-specific entries for clarity.
-- Outputs should balance clarity and detail, ensuring user inputs are interpreted but not excessively altered.
+For more example queries, refer to `database/query_examples.py`.
+
+## Contributing
+
+Feel free to contribute by submitting pull requests, creating issues, or suggesting improvements!
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).

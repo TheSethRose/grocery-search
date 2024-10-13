@@ -10,6 +10,7 @@ from datetime import datetime
 from fuzzywuzzy import fuzz
 import re
 from urllib.parse import urlencode
+import sys
 
 # Load environment variables
 load_dotenv()
@@ -436,7 +437,21 @@ if __name__ == "__main__":
     zip_code = os.getenv("POSTAL_CODE")
     if not zip_code:
         zip_code = input("Enter your postal code or zip code:\n")
-    grocery_list = input("Enter your grocery list (you can be as detailed as you like):\n")
+
+    print("Enter your grocery list (you can be as detailed as you like).")
+    print("Type 'END' on a new line when you're finished:")
+
+    grocery_list = []
+    while True:
+        line = input()
+        if line.strip().upper() == 'END':
+            break
+        grocery_list.append(line)
+
+    grocery_list = '\n'.join(grocery_list)
+
+    print("\nThank you! Starting the search process for your grocery items...")
+    print("This may take a few moments depending on the number of items.\n")
 
     # Create an instance of GroceryPriceFinder and process the grocery list
     finder = GroceryPriceFinder(zip_code, grocery_list)
