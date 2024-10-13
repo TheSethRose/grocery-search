@@ -1,0 +1,42 @@
+{
+  "ads": [],
+  "coupons": [],
+  "coupons_v2": [],
+  "ecom_items": [],
+  "facets": {
+    "filters": []
+  },
+  "flyers": [],
+  "items": [],
+  "merchants": [],
+  "native_ads": [],
+  "normalized_query": "",
+  "outside_fsa_flyers": {},
+  "related_flyers": [],
+  "related_items": [],
+  "sort": {
+    "filters": [
+      {
+        "data": {
+          "values": [
+            {
+              "id": "relevancy",
+              "display": "Sort by Relevance"
+            },
+            {
+              "id": "price_low_to_high",
+              "display": "Price - Low to High"
+            },
+            {
+              "id": "price_high_to_low",
+              "display": "Price - High to Low"
+            }
+          ]
+        },
+        "key": "sort_type",
+        "title": "Sort",
+        "type": "radio_group"
+      }
+    ]
+  }
+}

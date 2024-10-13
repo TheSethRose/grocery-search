@@ -166,7 +166,3 @@ erDiagram
 
 - Query Nutrients for Branded Foods: You can join `branded_food`, `food_nutrient`, and `nutrient` to get detailed nutrient information for branded food products.
 - Find Attributes for Specific Foods: By linking `food` with `food_attribute`, you can retrieve special attributes such as ingredient updates or labeling information.
-
-This Markdown file provides a detailed explanation of how all the tables in your database are interconnected, making it easier to understand and query the data.
-
-Let me know if you'd like further clarification or additional queries!
