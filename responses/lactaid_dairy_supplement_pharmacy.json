@@ -218,7 +218,7 @@
       "premium": true,
       "right": 4603.66,
       "sale_story": null,
-      "score": 47.861164,
+      "score": 49.76199,
       "top": -1013.94,
       "valid_from": "2024-10-09T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -247,7 +247,7 @@
       "premium": false,
       "right": 1714.85,
       "sale_story": null,
-      "score": 41.528473,
+      "score": 43.17779,
       "top": -921.757,
       "valid_from": "2024-10-02T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -276,7 +276,7 @@
       "premium": false,
       "right": 7285.81,
       "sale_story": null,
-      "score": 40.00478,
+      "score": 41.593582,
       "top": -1458.53,
       "valid_from": "2024-10-09T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -305,7 +305,7 @@
       "premium": false,
       "right": 3201.89,
       "sale_story": null,
-      "score": 39.27778,
+      "score": 40.837708,
       "top": -1039.61,
       "valid_from": "2024-10-09T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -337,7 +337,7 @@
       "premium": false,
       "right": 5842.52,
       "sale_story": null,
-      "score": 38.55224,
+      "score": 40.083355,
       "top": -670.61,
       "valid_from": "2024-10-09T05:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -366,7 +366,7 @@
       "premium": false,
       "right": 3201.18,
       "sale_story": "4X REWARD POINTS",
-      "score": 38.211174,
+      "score": 39.728745,
       "top": -1040.6,
       "valid_from": "2024-10-09T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -395,7 +395,7 @@
       "premium": false,
       "right": 41008.6,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 36.331367,
+      "score": 37.77428,
       "top": -495.275,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -427,7 +427,7 @@
       "premium": true,
       "right": 4151.6,
       "sale_story": null,
-      "score": 36.331367,
+      "score": 37.77428,
       "top": -1185.34,
       "valid_from": "2024-10-09T05:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -456,42 +456,10 @@
       "premium": false,
       "right": 55799.7,
       "sale_story": null,
-      "score": 36.331367,
+      "score": 37.77428,
       "top": -1846.4,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
-    },
-    {
-      "_L1": "Food, Beverages & Tobacco",
-      "_L2": "Beverages",
-      "bottom": -650.389,
-      "brand_ids": [
-        "593"
-      ],
-      "clean_image_url": "https://f.wishabi.net/page_items/353078102/1728438913/extra_large.jpg",
-      "clipping_image_url": "https://f.wishabi.net/page_items/353078102/1728438913/extra_large.jpg",
-      "current_price": 22.99,
-      "flyer_id": 6849376,
-      "flyer_item_id": 881881373,
-      "id": 881881373,
-      "indexed": false,
-      "item_type": "flyer",
-      "item_weight": 0,
-      "left": 434.944,
-      "merchant_id": 2264,
-      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
-      "merchant_name": "CVS Pharmacy",
-      "name": "Nestl\u00e9 Nido kinder powdered milk 56.3 oz.",
-      "original_price": null,
-      "post_price_text": "WITH CARD",
-      "pre_price_text": null,
-      "premium": false,
-      "right": 589.883,
-      "sale_story": null,
-      "score": 36.331367,
-      "top": -510.944,
-      "valid_from": "2024-10-13T04:00:00+00:00",
-      "valid_to": "2024-10-27T03:59:59+00:00"
     },
     {
       "_L1": "Food, Beverages & Tobacco",
@@ -520,10 +488,42 @@
       "premium": false,
       "right": 5455.89,
       "sale_story": null,
-      "score": 36.331367,
+      "score": 37.77428,
       "top": -586.763,
       "valid_from": "2024-10-09T05:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
+    },
+    {
+      "_L1": "Food, Beverages & Tobacco",
+      "_L2": "Beverages",
+      "bottom": -650.389,
+      "brand_ids": [
+        "593"
+      ],
+      "clean_image_url": "https://f.wishabi.net/page_items/353078102/1728438913/extra_large.jpg",
+      "clipping_image_url": "https://f.wishabi.net/page_items/353078102/1728438913/extra_large.jpg",
+      "current_price": 22.99,
+      "flyer_id": 6849376,
+      "flyer_item_id": 881881373,
+      "id": 881881373,
+      "indexed": false,
+      "item_type": "flyer",
+      "item_weight": 0,
+      "left": 434.944,
+      "merchant_id": 2264,
+      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
+      "merchant_name": "CVS Pharmacy",
+      "name": "Nestl\u00e9 Nido kinder powdered milk 56.3 oz.",
+      "original_price": null,
+      "post_price_text": "WITH CARD",
+      "pre_price_text": null,
+      "premium": false,
+      "right": 589.883,
+      "sale_story": null,
+      "score": 37.77428,
+      "top": -510.944,
+      "valid_from": "2024-10-13T04:00:00+00:00",
+      "valid_to": "2024-10-27T03:59:59+00:00"
     },
     {
       "_L1": "Health & Beauty",
@@ -549,7 +549,7 @@
       "premium": false,
       "right": 1883.5,
       "sale_story": "$4 off 1",
-      "score": 27.203026,
+      "score": 28.726849,
       "top": -69.3717,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -578,7 +578,7 @@
       "premium": true,
       "right": 4569.17,
       "sale_story": null,
-      "score": 24.851145,
+      "score": 26.243225,
       "top": -197.856,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -607,7 +607,7 @@
       "premium": false,
       "right": 9130.17,
       "sale_story": "$5 off 1",
-      "score": 24.001049,
+      "score": 25.345509,
       "top": -1895.45,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -636,7 +636,7 @@
       "premium": false,
       "right": 4436.68,
       "sale_story": "$4 off 1",
-      "score": 23.244621,
+      "score": 24.54671,
       "top": -14.7853,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -665,7 +665,7 @@
       "premium": false,
       "right": 3696.8,
       "sale_story": "$4 off 1",
-      "score": 23.224543,
+      "score": 24.525505,
       "top": -14.7853,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -694,7 +694,7 @@
       "premium": true,
       "right": 11473.8,
       "sale_story": null,
-      "score": 23.081062,
+      "score": 24.373987,
       "top": -538.093,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -726,7 +726,7 @@
       "premium": true,
       "right": 18352.5,
       "sale_story": null,
-      "score": 22.90496,
+      "score": 24.18802,
       "top": -1351.7,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -755,7 +755,7 @@
       "premium": false,
       "right": 2606.56,
       "sale_story": "$10 off 2",
-      "score": 22.568157,
+      "score": 23.83235,
       "top": -547.503,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -787,7 +787,7 @@
       "premium": true,
       "right": 4521.09,
       "sale_story": null,
-      "score": 22.53061,
+      "score": 23.7927,
       "top": -1270.34,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -816,7 +816,7 @@
       "premium": false,
       "right": 16887.2,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 22.513466,
+      "score": 23.774595,
       "top": -958.883,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -848,7 +848,7 @@
       "premium": true,
       "right": 4750.96,
       "sale_story": null,
-      "score": 22.09275,
+      "score": 23.330313,
       "top": -753.13,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -880,7 +880,7 @@
       "premium": true,
       "right": 1461,
       "sale_story": null,
-      "score": 22.040506,
+      "score": 23.275143,
       "top": -1029.54,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -912,7 +912,7 @@
       "premium": true,
       "right": 5693.03,
       "sale_story": null,
-      "score": 21.856354,
+      "score": 23.080675,
       "top": -396.541,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -944,7 +944,7 @@
       "premium": true,
       "right": 7616.51,
       "sale_story": null,
-      "score": 21.856354,
+      "score": 23.080675,
       "top": -819.159,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -976,7 +976,7 @@
       "premium": true,
       "right": 5214.19,
       "sale_story": null,
-      "score": 21.83671,
+      "score": 23.059929,
       "top": -1558.27,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1005,7 +1005,7 @@
       "premium": false,
       "right": 9842.56,
       "sale_story": "$10 off 2",
-      "score": 21.71517,
+      "score": 22.931581,
       "top": -963.733,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -1037,7 +1037,7 @@
       "premium": true,
       "right": 6188.99,
       "sale_story": null,
-      "score": 21.32903,
+      "score": 22.523811,
       "top": -395.601,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1069,7 +1069,7 @@
       "premium": true,
       "right": 10734.1,
       "sale_story": null,
-      "score": 21.15167,
+      "score": 22.336517,
       "top": -534.395,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -1101,7 +1101,7 @@
       "premium": true,
       "right": 516.474,
       "sale_story": null,
-      "score": 21.071798,
+      "score": 22.25217,
       "top": -1283.32,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1130,42 +1130,10 @@
       "premium": true,
       "right": 1466.86,
       "sale_story": null,
-      "score": 21.071798,
+      "score": 22.25217,
       "top": -1281.56,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
-    },
-    {
-      "_L1": "Health & Beauty",
-      "_L2": "Health Care",
-      "bottom": -1473.75,
-      "brand_ids": [
-        "1877"
-      ],
-      "clean_image_url": "https://f.wishabi.net/page_items/349688750/1726259338/extra_large.jpg",
-      "clipping_image_url": "https://f.wishabi.net/page_items/349688750/1726259338/extra_large.jpg",
-      "current_price": 1,
-      "flyer_id": 6805441,
-      "flyer_item_id": 874113939,
-      "id": 874113939,
-      "indexed": false,
-      "item_type": "flyer",
-      "item_weight": 0.4783,
-      "left": 9273.32,
-      "merchant_id": 2150,
-      "merchant_logo": "http://images.wishabi.net/merchants/2150/1507308841/2150.jpg",
-      "merchant_name": "Family Dollar",
-      "name": "Family Wellness Cough Drops",
-      "original_price": null,
-      "post_price_text": null,
-      "pre_price_text": "Starting at",
-      "premium": true,
-      "right": 10009.3,
-      "sale_story": null,
-      "score": 20.997513,
-      "top": -608.36,
-      "valid_from": "2024-09-15T04:00:00+00:00",
-      "valid_to": "2024-12-02T04:59:59+00:00"
     },
     {
       "_L1": "Health & Beauty",
@@ -1194,7 +1162,7 @@
       "premium": true,
       "right": 8396.84,
       "sale_story": null,
-      "score": 20.997513,
+      "score": 22.173723,
       "top": -1351.7,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -1226,7 +1194,7 @@
       "premium": true,
       "right": 5211.61,
       "sale_story": null,
-      "score": 20.997513,
+      "score": 22.173723,
       "top": -391.851,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1255,10 +1223,42 @@
       "premium": false,
       "right": 7297.15,
       "sale_story": "$7 off 1",
-      "score": 20.997513,
+      "score": 22.173723,
       "top": -1360.75,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
+    },
+    {
+      "_L1": "Health & Beauty",
+      "_L2": "Health Care",
+      "bottom": -1473.75,
+      "brand_ids": [
+        "1877"
+      ],
+      "clean_image_url": "https://f.wishabi.net/page_items/349688750/1726259338/extra_large.jpg",
+      "clipping_image_url": "https://f.wishabi.net/page_items/349688750/1726259338/extra_large.jpg",
+      "current_price": 1,
+      "flyer_id": 6805441,
+      "flyer_item_id": 874113939,
+      "id": 874113939,
+      "indexed": false,
+      "item_type": "flyer",
+      "item_weight": 0.4783,
+      "left": 9273.32,
+      "merchant_id": 2150,
+      "merchant_logo": "http://images.wishabi.net/merchants/2150/1507308841/2150.jpg",
+      "merchant_name": "Family Dollar",
+      "name": "Family Wellness Cough Drops",
+      "original_price": null,
+      "post_price_text": null,
+      "pre_price_text": "Starting at",
+      "premium": true,
+      "right": 10009.3,
+      "sale_story": null,
+      "score": 22.173723,
+      "top": -608.36,
+      "valid_from": "2024-09-15T04:00:00+00:00",
+      "valid_to": "2024-12-02T04:59:59+00:00"
     },
     {
       "_L1": "Health & Beauty",
@@ -1287,7 +1287,7 @@
       "premium": true,
       "right": 980.03,
       "sale_story": null,
-      "score": 20.997513,
+      "score": 22.173723,
       "top": -1026.9,
       "valid_from": "2024-10-01T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1316,7 +1316,7 @@
       "premium": true,
       "right": 8717.5,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -1428.57,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1345,7 +1345,7 @@
       "premium": true,
       "right": 9607.55,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -186.703,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1374,7 +1374,7 @@
       "premium": true,
       "right": 9616.87,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -995.195,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-11-01T03:59:59+00:00"
@@ -1403,7 +1403,7 @@
       "premium": true,
       "right": 31951.9,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -612.254,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1432,7 +1432,7 @@
       "premium": false,
       "right": 18080.6,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -506.156,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1461,7 +1461,7 @@
       "premium": false,
       "right": 16880,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -485.818,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1490,7 +1490,7 @@
       "premium": false,
       "right": 13262.2,
       "sale_story": "BOGO 50% off* with myWalgreens +5% W Cash rewards**",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -1974.05,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1522,7 +1522,7 @@
       "premium": false,
       "right": 286.685,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -808.71,
       "valid_from": "2024-10-06T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -1551,7 +1551,7 @@
       "premium": false,
       "right": 15078.2,
       "sale_story": null,
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -464.753,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1580,7 +1580,7 @@
       "premium": false,
       "right": 6622.91,
       "sale_story": "+5% W Cash rewards^^",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -1497.48,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1609,7 +1609,7 @@
       "premium": false,
       "right": 15066.8,
       "sale_story": "Earn $5 In-store rewards when you buy 2**",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -962.05,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1638,7 +1638,7 @@
       "premium": false,
       "right": 17476.9,
       "sale_story": "$5 off Walgreens coupon\u25ca",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -487.81,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1667,7 +1667,7 @@
       "premium": false,
       "right": 16885.3,
       "sale_story": "$4 off with myWalgreens",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -1475.62,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1696,7 +1696,7 @@
       "premium": false,
       "right": 16882.9,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 20.19257,
+      "score": 21.32369,
       "top": -1992.92,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"

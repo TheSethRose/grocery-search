@@ -2,37 +2,7 @@
   "ads": [],
   "coupons": [],
   "coupons_v2": [],
-  "ecom_items": [
-    {
-      "average_rating": null,
-      "current_price": 16.79,
-      "description": "VITAFUSION MEN'S MULTI DAILY MULTIVITAMIN BERRY GUMMIES",
-      "display": "show",
-      "global_id": "21b9301b-b8f5-58ab-a764-15867d73d547",
-      "global_id_int": 523577961499892,
-      "id": 1437233,
-      "image_url": "https://f.wishabi.net/item-assets/2264/0e3f711532874877d17c11cf1d80732b/small.png",
-      "item_id": "887892",
-      "item_type": "ecom",
-      "merchant": "CVS Pharmacy",
-      "merchant_id": 2264,
-      "merchant_logo": "https://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
-      "name": "VITAFUSION MEN'S MULTI DAILY MULTIVITAMIN BERRY GUMMIES",
-      "original_price": null,
-      "return_info": {
-        "details_url": "",
-        "tag_line": ""
-      },
-      "score": 410.56116,
-      "shipping_info": {
-        "details_url": "",
-        "tag_line": ""
-      },
-      "shipping_tag_line": "",
-      "sku": "887892",
-      "total_reviews": 0
-    }
-  ],
+  "ecom_items": [],
   "facets": {
     "filters": [
       {
@@ -42,13 +12,97 @@
               "id": "all",
               "display": "Any Store",
               "logo_url": "",
+              "count": 73
+            },
+            {
+              "id": 2101,
+              "display": "Academy Sports + Outdoors",
+              "logo_url": "https://images.wishabi.net/merchants/GrDseIkPS98yoA==/RackMultipart20201013-1-116h1fy.jpg",
+              "count": 2
+            },
+            {
+              "id": 5661,
+              "display": "Albertsons",
+              "logo_url": "https://images.wishabi.net/merchants/1536592462/1536592462/storefront_logo",
               "count": 1
+            },
+            {
+              "id": 2457,
+              "display": "Brookshire's",
+              "logo_url": "https://images.wishabi.net/merchants/ebb4f1ee-2860-4608-a63b-cb898788595b/RackMultipart20230823-1-bzwn9e.jpg",
+              "count": 3
             },
             {
               "id": 2264,
               "display": "CVS Pharmacy",
               "logo_url": "https://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
+              "count": 13
+            },
+            {
+              "id": 2150,
+              "display": "Family Dollar",
+              "logo_url": "https://images.wishabi.net/merchants/2150/1507308841/2150.jpg",
+              "count": 2
+            },
+            {
+              "id": 2467,
+              "display": "H-E-B",
+              "logo_url": "https://images.wishabi.net/merchants/2467/1507145803/2467.jpg",
               "count": 1
+            },
+            {
+              "id": 3883,
+              "display": "Kroger",
+              "logo_url": "https://images.wishabi.net/merchants/TwHOf9cj5fUCEQ==/RackMultipart20210421-1-tp46bo.jpeg",
+              "count": 1
+            },
+            {
+              "id": 2352,
+              "display": "Market Street",
+              "logo_url": "https://images.wishabi.net/merchants/2352/1507145260/2352.jpg",
+              "count": 4
+            },
+            {
+              "id": 2884,
+              "display": "Nebraska Furniture Mart",
+              "logo_url": "https://images.wishabi.net/merchants/WrAFCmGqZSaTGA==/RackMultipart20191206-1-1ezeu1z.jpg",
+              "count": 1
+            },
+            {
+              "id": 2261,
+              "display": "Ollie's Bargain Outlet",
+              "logo_url": "https://images.wishabi.net/merchants/deea3a15-3d6a-4d6a-8cd5-5852295762f6/RackMultipart20240215-1-d0u7g1.jpg",
+              "count": 2
+            },
+            {
+              "id": 2419,
+              "display": "Sprouts Farmers Market",
+              "logo_url": "https://images.wishabi.net/merchants/drBrUHVLh792eQ==/RackMultipart20200914-1-10uzd03.jpg",
+              "count": 2
+            },
+            {
+              "id": 2040,
+              "display": "Target",
+              "logo_url": "https://images.wishabi.net/merchants/2040/1507308737/2040.jpg",
+              "count": 1
+            },
+            {
+              "id": 2381,
+              "display": "Tom Thumb",
+              "logo_url": "https://images.wishabi.net/merchants/2381/1520440126/storefront_logo",
+              "count": 1
+            },
+            {
+              "id": 2501,
+              "display": "ULTA",
+              "logo_url": "https://images.wishabi.net/merchants/d006e3c7-fd8f-4237-ba35-894083141851/RackMultipart20230125-1-qgofpt.jpg",
+              "count": 1
+            },
+            {
+              "id": 2460,
+              "display": "Walgreens",
+              "logo_url": "https://images.wishabi.net/merchants/2460/1507309295/2460.jpg",
+              "count": 38
             }
           ]
         },
@@ -62,17 +116,17 @@
             {
               "id": "all",
               "display": "All Types",
-              "count": 1
+              "count": 73
             },
             {
               "id": "flyer_items",
               "display": "Weekly Ad Deals",
-              "count": 0
+              "count": 73
             },
             {
               "id": "online_items",
               "display": "Online Deals",
-              "count": 1
+              "count": 0
             },
             {
               "id": "coupons",
@@ -119,7 +173,7 @@
       "premium": true,
       "right": 14865,
       "sale_story": null,
-      "score": 94.08298,
+      "score": 89.933105,
       "top": -1640.17,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -148,7 +202,7 @@
       "premium": false,
       "right": 6242.31,
       "sale_story": "$1.50 off 1",
-      "score": 93.52139,
+      "score": 89.39629,
       "top": -434.006,
       "valid_from": "2024-09-29T04:00:00+00:00",
       "valid_to": "2024-11-03T03:59:59+00:00"
@@ -180,7 +234,7 @@
       "premium": true,
       "right": 9983.38,
       "sale_story": null,
-      "score": 84.807045,
+      "score": 81.06633,
       "top": -1510.73,
       "valid_from": "2024-09-15T04:00:00+00:00",
       "valid_to": "2024-12-02T04:59:59+00:00"
@@ -209,7 +263,7 @@
       "premium": false,
       "right": 5260.85,
       "sale_story": null,
-      "score": 79.283905,
+      "score": 75.786804,
       "top": -1886.65,
       "valid_from": "2024-10-10T04:00:00+00:00",
       "valid_to": "2024-10-17T03:59:59+00:00"
@@ -238,7 +292,7 @@
       "premium": false,
       "right": 13271.8,
       "sale_story": "Earn $5 ln-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": 0,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -267,7 +321,7 @@
       "premium": false,
       "right": 12065.1,
       "sale_story": "Earn $5 In - store rewards buy2 , BOGO FREE* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -2.7391,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -296,7 +350,7 @@
       "premium": false,
       "right": 13875.4,
       "sale_story": "40% off with myWalgreens, +5% W Cash rewards^^",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -999.998,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -325,7 +379,7 @@
       "premium": false,
       "right": 14459.2,
       "sale_story": "$3 off with myWalgreens, $1 off online coupon",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": 0,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -354,7 +408,7 @@
       "premium": false,
       "right": 5422.37,
       "sale_story": "BOGO 50% off* with myWalgreens + 5% W Cash rewards",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -491.399,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -383,7 +437,7 @@
       "premium": false,
       "right": 13870.8,
       "sale_story": "Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": 0,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -412,7 +466,7 @@
       "premium": false,
       "right": 17043.2,
       "sale_story": "20% OFF ALL VITAMINS & BODY CARE",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -359.412,
       "valid_from": "2024-10-09T07:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -441,7 +495,7 @@
       "premium": false,
       "right": 12660.6,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -508.382,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -470,7 +524,7 @@
       "premium": false,
       "right": 12069.5,
       "sale_story": "BOGO 50% off* with myWalgreens. $1 off online coupon\u25ca",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1985.26,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -499,7 +553,7 @@
       "premium": false,
       "right": 5427,
       "sale_story": "BOGO FREE* with myWalgreens Mix and Match +5% W Cash rewards",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1993.4,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -528,7 +582,7 @@
       "premium": false,
       "right": 13273.2,
       "sale_story": "40% off with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -987.996,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -557,7 +611,7 @@
       "premium": false,
       "right": 11463.6,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1.31349,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -586,7 +640,7 @@
       "premium": false,
       "right": 13269.5,
       "sale_story": "BOGO FREE* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -496.594,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -615,7 +669,7 @@
       "premium": false,
       "right": 9646.52,
       "sale_story": "BOGO FREE* with myWalgreens, +5% W Cash rewards^^",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1390.3,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -644,7 +698,7 @@
       "premium": false,
       "right": 6640,
       "sale_story": "40% Off with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -488.925,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -673,7 +727,7 @@
       "premium": false,
       "right": 4816.53,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1984.94,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -702,7 +756,7 @@
       "premium": false,
       "right": 14461.7,
       "sale_story": "25% off with myWalgreens, Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -502.298,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -731,7 +785,7 @@
       "premium": false,
       "right": 13873.6,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1500.08,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -760,7 +814,7 @@
       "premium": false,
       "right": 11460.9,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -464.988,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -789,7 +843,7 @@
       "premium": false,
       "right": 14470.7,
       "sale_story": "$2 off with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1496.96,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -818,7 +872,7 @@
       "premium": false,
       "right": 12067.2,
       "sale_story": "25% off with myWalgreens, Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -496.247,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -847,7 +901,7 @@
       "premium": false,
       "right": 16273.9,
       "sale_story": "BOGO 50% off* with myWalgreens, Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -479.549,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -876,7 +930,7 @@
       "premium": false,
       "right": 7224.67,
       "sale_story": "40% off with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -495.758,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -905,7 +959,7 @@
       "premium": false,
       "right": 12066.8,
       "sale_story": "BOGO FREE* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1505.14,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -934,7 +988,7 @@
       "premium": false,
       "right": 13270.8,
       "sale_story": "25% off with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1496.8,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -963,7 +1017,7 @@
       "premium": false,
       "right": 11457.8,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1989.55,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -992,7 +1046,7 @@
       "premium": false,
       "right": 12663,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1500.31,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1021,7 +1075,7 @@
       "premium": false,
       "right": 13877.4,
       "sale_story": "25% off with myWalgreens, Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -496.808,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1050,7 +1104,7 @@
       "premium": false,
       "right": 12655,
       "sale_story": "Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1993.94,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1082,7 +1136,7 @@
       "premium": true,
       "right": 2725.46,
       "sale_story": "BUY ONE GET ONE FOR $0.01",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1973.41,
       "valid_from": "2024-10-09T05:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -1097,21 +1151,21 @@
       "flyer_id": 6857014,
       "flyer_item_id": 880435932,
       "id": 880435932,
-      "indexed": false,
+      "indexed": true,
       "item_type": "flyer",
       "item_weight": 0,
       "left": 5200.44,
       "merchant_id": 2352,
       "merchant_logo": "http://images.wishabi.net/merchants/2352/1507145260/2352.jpg",
       "merchant_name": "Market Street",
-      "name": "33%\nOFF\nNature Made\nVitamins\nSelected Varieties\n",
+      "name": null,
       "original_price": null,
       "post_price_text": null,
       "pre_price_text": null,
       "premium": false,
       "right": 5460.82,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -165.588,
       "valid_from": "2024-10-09T04:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -1140,7 +1194,7 @@
       "premium": false,
       "right": 1089.8,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1143.89,
       "valid_from": "2024-10-07T04:00:00+00:00",
       "valid_to": "2024-10-14T03:59:59+00:00"
@@ -1169,7 +1223,7 @@
       "premium": false,
       "right": 11465.4,
       "sale_story": "BOGO 50% off* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1002.55,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1201,7 +1255,7 @@
       "premium": false,
       "right": 47440.6,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -710.7,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1233,7 +1287,7 @@
       "premium": false,
       "right": 414.5,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -339.092,
       "valid_from": "2024-10-09T13:00:00+00:00",
       "valid_to": "2024-10-17T01:00:59+00:00"
@@ -1265,7 +1319,7 @@
       "premium": false,
       "right": 172.857,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -319.517,
       "valid_from": "2024-10-09T13:00:00+00:00",
       "valid_to": "2024-10-17T01:00:59+00:00"
@@ -1294,7 +1348,7 @@
       "premium": true,
       "right": 5160.09,
       "sale_story": "25% OFF REGULAR RETAIL",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1928.32,
       "valid_from": "2024-10-09T05:00:00+00:00",
       "valid_to": "2024-10-16T03:59:59+00:00"
@@ -1323,7 +1377,7 @@
       "premium": false,
       "right": 4903.89,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1363.83,
       "valid_from": "2024-10-10T04:00:00+00:00",
       "valid_to": "2024-10-17T03:59:59+00:00"
@@ -1352,7 +1406,7 @@
       "premium": false,
       "right": 4229.58,
       "sale_story": "BOGO FREE* with myWalgreens, Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1000.04,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1381,7 +1435,7 @@
       "premium": false,
       "right": 12661.9,
       "sale_story": "Earn $5 In-store rewards when you buy 2**",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -991.746,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1410,7 +1464,7 @@
       "premium": false,
       "right": 11458.2,
       "sale_story": "BOGO FREE* with myWalgreens",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -1490.96,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1439,7 +1493,7 @@
       "premium": false,
       "right": 12657.3,
       "sale_story": "BOGO FREE* with myWalgreens, $1 off online coupon\u25ca",
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -5.63704,
       "valid_from": "2024-10-13T04:00:00+00:00",
       "valid_to": "2024-10-20T03:59:59+00:00"
@@ -1448,19 +1502,80 @@
       "_L1": "Health & Beauty",
       "_L2": "Health Care",
       "bottom": -1490.15,
-      "brand_ids": [
-        "191"
-      ],
-      "clean_image_url": "https://f.wishabi.net/page_items/352939845/1728355525/extra_large.jpg",
-      "clipping_image_url": "https://f.wishabi.net/page_items/352939845/1728355525/extra_large.jpg",
+      "clean_image_url": "https://f.wishabi.net/page_items/352939855/1728355556/extra_large.jpg",
+      "clipping_image_url": "https://f.wishabi.net/page_items/352939855/1728355556/extra_large.jpg",
       "current_price": null,
       "flyer_id": 6870069,
-      "flyer_item_id": 881589465,
-      "id": 881589465,
+      "flyer_item_id": 881589391,
+      "id": 881589391,
       "indexed": false,
       "item_type": "flyer",
       "item_weight": 0,
-      "left": 20684.7,
+      "left": 21246.2,
+      "merchant_id": 2264,
+      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
+      "merchant_name": "CVS Pharmacy",
+      "name": "ALL Nature's Bounty, Optimal Solutions protein powder, Sundown Naturals or Ester-C vitamins",
+      "original_price": null,
+      "post_price_text": null,
+      "pre_price_text": null,
+      "premium": false,
+      "right": 21807.8,
+      "sale_story": "Buy 1 get 1 FREE* WITH CARD",
+      "score": 69.04422,
+      "top": -858.457,
+      "valid_from": "2024-10-13T05:00:00+00:00",
+      "valid_to": "2024-10-20T04:59:59+00:00"
+    },
+    {
+      "_L1": "Health & Beauty",
+      "_L2": "Health Care",
+      "bottom": -509.469,
+      "brand_ids": [
+        "582"
+      ],
+      "clean_image_url": "https://f.wishabi.net/page_items/352939917/1728355557/extra_large.jpg",
+      "clipping_image_url": "https://f.wishabi.net/page_items/352939917/1728355557/extra_large.jpg",
+      "current_price": null,
+      "flyer_id": 6870069,
+      "flyer_item_id": 881583636,
+      "id": 881583636,
+      "indexed": false,
+      "item_type": "flyer",
+      "item_weight": 0,
+      "left": 413,
+      "merchant_id": 2264,
+      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
+      "merchant_name": "CVS Pharmacy",
+      "name": "ALL Nature Made vitamins",
+      "original_price": null,
+      "post_price_text": null,
+      "pre_price_text": null,
+      "premium": false,
+      "right": 553,
+      "sale_story": "Buy 1 Get 1 FREE* WITH CARD",
+      "score": 69.04422,
+      "top": -278.469,
+      "valid_from": "2024-10-13T05:00:00+00:00",
+      "valid_to": "2024-10-20T04:59:59+00:00"
+    },
+    {
+      "_L1": "Health & Beauty",
+      "_L2": "Health Care",
+      "bottom": -524.469,
+      "brand_ids": [
+        "8006"
+      ],
+      "clean_image_url": "https://f.wishabi.net/page_items/352939916/1728355556/extra_large.jpg",
+      "clipping_image_url": "https://f.wishabi.net/page_items/352939916/1728355556/extra_large.jpg",
+      "current_price": null,
+      "flyer_id": 6870069,
+      "flyer_item_id": 881583716,
+      "id": 881583716,
+      "indexed": false,
+      "item_type": "flyer",
+      "item_weight": 0,
+      "left": 237,
       "merchant_id": 2264,
       "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
       "merchant_name": "CVS Pharmacy",
@@ -1469,39 +1584,10 @@
       "post_price_text": null,
       "pre_price_text": null,
       "premium": false,
-      "right": 21246.2,
-      "sale_story": "Buy 1 get 1 FREE* WITH CARD*",
-      "score": 72.230194,
-      "top": -858.457,
-      "valid_from": "2024-10-13T05:00:00+00:00",
-      "valid_to": "2024-10-20T04:59:59+00:00"
-    },
-    {
-      "_L1": "Health & Beauty",
-      "_L2": "Health Care",
-      "bottom": -3385.24,
-      "clean_image_url": "https://f.wishabi.net/page_items/352939870/1728355565/extra_large.jpg",
-      "clipping_image_url": "https://f.wishabi.net/page_items/352939870/1728355565/extra_large.jpg",
-      "current_price": null,
-      "flyer_id": 6870069,
-      "flyer_item_id": 881589451,
-      "id": 881589451,
-      "indexed": false,
-      "item_type": "flyer",
-      "item_weight": 0,
-      "left": 21807.8,
-      "merchant_id": 2264,
-      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
-      "merchant_name": "CVS Pharmacy",
-      "name": "ANY Centrum, Caltrate or Emergen-C vitamins",
-      "original_price": null,
-      "post_price_text": null,
-      "pre_price_text": null,
-      "premium": false,
-      "right": 22369.3,
-      "sale_story": "Buy 1 get 1 50% OFF* WITH CARD PLUS Also get savings with Buy 2 get $5 ExtraBucks Rewards\u00ae\u2666 WITH CARD",
-      "score": 72.230194,
-      "top": -2753.54,
+      "right": 396,
+      "sale_story": "Buy 1 Get 1 FREE* WITH CARD",
+      "score": 69.04422,
+      "top": -286.469,
       "valid_from": "2024-10-13T05:00:00+00:00",
       "valid_to": "2024-10-20T04:59:59+00:00"
     },
@@ -1529,37 +1615,8 @@
       "premium": false,
       "right": 21266.7,
       "sale_story": null,
-      "score": 72.230194,
+      "score": 69.04422,
       "top": -80.6937,
-      "valid_from": "2024-10-13T05:00:00+00:00",
-      "valid_to": "2024-10-20T04:59:59+00:00"
-    },
-    {
-      "_L1": "Health & Beauty",
-      "_L2": "Health Care",
-      "bottom": -3385.24,
-      "clean_image_url": "https://f.wishabi.net/page_items/352939853/1728355528/extra_large.jpg",
-      "clipping_image_url": "https://f.wishabi.net/page_items/352939853/1728355528/extra_large.jpg",
-      "current_price": null,
-      "flyer_id": 6870069,
-      "flyer_item_id": 881589501,
-      "id": 881589501,
-      "indexed": false,
-      "item_type": "flyer",
-      "item_weight": 0,
-      "left": 20684.7,
-      "merchant_id": 2264,
-      "merchant_logo": "http://images.wishabi.net/merchants/2264/1507308958/2264.jpg",
-      "merchant_name": "CVS Pharmacy",
-      "name": "ALL Ocuvite or PreserVision vitamins",
-      "original_price": null,
-      "post_price_text": null,
-      "pre_price_text": null,
-      "premium": false,
-      "right": 21246.2,
-      "sale_story": "Buy 1 get 1 50% OFF* WITH CARD",
-      "score": 72.230194,
-      "top": -2753.54,
       "valid_from": "2024-10-13T05:00:00+00:00",
       "valid_to": "2024-10-20T04:59:59+00:00"
     }

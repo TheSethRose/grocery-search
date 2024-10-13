@@ -14,9 +14,10 @@ from urllib.parse import urlencode
 # Load environment variables
 load_dotenv()
 
+# Initialize the OpenAI client using the API key from environment variables
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Set up logging
+# Set up logging with the log level from environment variables
 log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
 logging.basicConfig(level=log_level, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -36,10 +37,11 @@ class GroceryPriceFinder:
         self.available_stores = set()
         self.store_item_counts = Counter()
 
-        # Create necessary directories
+        # Create necessary directories for storing response data
         os.makedirs("responses", exist_ok=True)
 
     def connect_db(self):
+        # Connect to the SQLite database
         try:
             conn = sqlite3.connect(DATABASE_PATH)
             logging.info(f"Connected to SQLite database: {DATABASE_PATH}")
@@ -49,6 +51,7 @@ class GroceryPriceFinder:
             return None
 
     def parse_grocery_list(self):
+        # Use OpenAI to parse the grocery list into structured data
         response = client.chat.completions.create(
             model="gpt-4o-mini",  # Don't change this, it's correct.
             messages=[
@@ -83,6 +86,7 @@ class GroceryPriceFinder:
             function_call={"name": "clarify_grocery_list"}
         )
 
+        # Extract the parsed data from the response
         function_call = response.choices[0].message.function_call
         if function_call and function_call.name == "clarify_grocery_list":
             parsed_list = json.loads(function_call.arguments)
@@ -93,6 +97,7 @@ class GroceryPriceFinder:
             return []
 
     def expand_item_info(self, item):
+        # Expand item information by querying the database
         conn = self.connect_db()
         if not conn:
             return item
@@ -111,6 +116,7 @@ class GroceryPriceFinder:
             cursor.execute(query_branded, (item['brand'],))
             result_branded = cursor.fetchone()
 
+            # If a result is found, update the item with additional information
             if result_branded:
                 item['brand_owner'] = result_branded[0]
                 item['ingredients'] = result_branded[1]
@@ -127,6 +133,7 @@ class GroceryPriceFinder:
         return item
 
     def build_query_for_item(self, item):
+        # Build a search query for the item
         query_parts = []
 
         # Include brand if specified
@@ -136,6 +143,7 @@ class GroceryPriceFinder:
         # Always include the item name
         query_parts.append(item['name'])
 
+        # Optionally include other attributes like type, quantity, and category
         if item.get('type'):
             query_parts.append(item['type'])
         if item.get('quantity'):
@@ -143,35 +151,31 @@ class GroceryPriceFinder:
         if item.get('category'):
             query_parts.append(item['category'])
 
+        # Join all parts to form the query string
         query = ' '.join(query_parts)
         logging.debug(f"Built query for '{item['name']}': {query}")
         return query.strip()
 
     def search_item(self, query):
+        # Search for the item using the backend API
         try:
             params = {'q': query, 'postal_code': self.zip_code}
             url = f"{BACKEND_URL}?{urlencode(params)}"
             logging.info(f"Searching URL: {url}")
 
-            # Log the request
-            self.log_api_interaction("REQUEST", url)
-
             response = requests.get(url)
             response.raise_for_status()
-
-            # Log the raw response
-            self.log_api_interaction("RESPONSE", response.text)
 
             try:
                 data = response.json()
                 # Save the JSON response for debugging purposes
-                #if DEBUG:
                 self.save_json_response(query, data)
             except json.JSONDecodeError as e:
                 logging.error(f"Failed to parse JSON response: {e}")
                 logging.error(f"Response content: {response.text}")
                 return []
 
+            # Extract items from the response
             items = data.get('items', []) + data.get('ecom_items', []) + data.get('related_items', [])
             logging.info(f"Found {len(items)} items for query: {query}")
 
@@ -190,19 +194,18 @@ class GroceryPriceFinder:
                 # Update the store item counts with the raw (non-normalized) store name
                 self.store_item_counts[store_name] += 1
 
-            logging.info(f"Stores found: {', '.join(sorted(stores))}")
-
             return items
         except requests.RequestException as e:
             logging.error(f"Error searching for item {query}: {e}")
             return []
 
     def parse_price(self, item):
+        # Parse the price from the item data
         if item is None:
             return None
         if 'current_price' in item and item['current_price'] is not None:
             return float(item['current_price'])
-        # Try to extract price from 'sale_story' or 'name'
+        # Try to extract price from other fields like 'sale_story' or 'name'
         possible_fields = ['sale_story', 'name', 'description']
         for field in possible_fields:
             text = item.get(field, '')
@@ -213,10 +216,11 @@ class GroceryPriceFinder:
         return None
 
     def parse_unit_size(self, item):
+        # Parse the unit size from the item name
         name = item.get('name', '')
         if not name:
             return {'size': 1, 'unit': 'unit'}
-        # Try to extract size and unit from the name
+        # Extract size and unit using regular expressions
         size_match = re.search(r'([0-9]+(\.[0-9]+)?)\s*(oz|fl oz|g|ml|lb|kg|pack|ct|count|litre|liter|l)', name.lower())
         if size_match:
             size = float(size_match.group(1))
@@ -225,8 +229,10 @@ class GroceryPriceFinder:
         return {'size': 1, 'unit': 'unit'}
 
     def normalize_price(self, price, size, unit):
+        # Normalize the price per ounce or unit
         if price is None or size == 0:
             return None
+        # Conversion rates for different units to ounces
         conversion_rates = {
             'lb': 16,
             'kg': 35.274,
@@ -245,6 +251,7 @@ class GroceryPriceFinder:
         return price / size_in_oz if size_in_oz else None
 
     def item_matches(self, item, original_item):
+        # Check if an item matches the original based on name and brand
         if item is None or not isinstance(item, dict):
             return False
 
@@ -255,17 +262,18 @@ class GroceryPriceFinder:
         item_name = item_name.lower()
         original_name = original_item['name'].lower()
 
-        # If a brand is specified, it must match
+        # If a brand is specified, ensure it matches
         if original_item.get('brand'):
             if original_item['brand'].lower() not in item_name:
                 return False
 
-        # Use fuzzy matching on item name
+        # Use fuzzy matching to compare item names
         ratio = fuzz.partial_ratio(original_name, item_name)
 
-        return ratio >= 70  # Adjusted the threshold to be more inclusive
+        return ratio >= 70  # Threshold for considering a match
 
     def find_cheapest_item(self, items, original_item, query, revised_query):
+        # Find the cheapest matching item from the list of items
         logging.debug(f"Finding cheapest item for: {original_item['name']}")
         cheapest_item = None
         lowest_normalized_price = float('inf')
@@ -297,19 +305,23 @@ class GroceryPriceFinder:
                 logging.debug(f"Item does not match: {item.get('name', 'No name')}")
                 continue
 
+            # Parse the price of the item
             price = self.parse_price(item)
             if price is None:
                 logging.debug(f"No price found for item: {item.get('name', 'No name')}")
                 continue
 
+            # Parse the unit size of the item
             size_data = self.parse_unit_size(item)
+            # Normalize the price per unit size
             normalized_price = self.normalize_price(price, size_data['size'], size_data['unit'])
 
-            # Check if brand matches if specified
+            # Check if the brand matches if specified
             if original_item.get('brand') and original_item['brand'].lower() not in item.get('name', '').lower():
                 logging.debug(f"Brand mismatch for item: {item.get('name', 'No name')}")
                 continue
 
+            # Update the cheapest item if a lower price is found
             if normalized_price is not None and normalized_price < lowest_normalized_price:
                 lowest_normalized_price = normalized_price
                 cheapest_item = {
@@ -328,6 +340,7 @@ class GroceryPriceFinder:
                 }
                 logging.debug(f"New cheapest item found: {cheapest_item['name']} at {cheapest_item['store']}")
 
+        # If no valid item is found, return a default response
         if not cheapest_item:
             logging.warning(f"No valid items found for {original_item['name']}")
             cheapest_item = {
@@ -348,15 +361,20 @@ class GroceryPriceFinder:
         return cheapest_item
 
     def process_grocery_list(self):
+        # Process the entire grocery list to find the cheapest items
         parsed_list = self.parse_grocery_list()
         for item in parsed_list:
             logging.info(f"Processing item: {item['name']}")
+            # Expand item information using the database
             expanded_item = self.expand_item_info(item)
+            # Build the original and revised queries
             original_query = item['name']
             revised_query = self.build_query_for_item(expanded_item)
+            # Search for items and find the cheapest match
             results = self.search_item(revised_query)
             cheapest_item = self.find_cheapest_item(results, expanded_item, original_query, revised_query)
             self.grocery_items.append(cheapest_item)
+            # Track the stores where items were found
             if cheapest_item['store'] not in ['Unknown Store', 'None']:
                 self.available_stores.add(cheapest_item['store'])
 
@@ -364,15 +382,17 @@ class GroceryPriceFinder:
                 logging.debug(f"Cheapest item for {item['name']}: {cheapest_item['store']} - ${cheapest_item['price']}")
 
     def print_grocery_items(self):
+        # Print the results for all items in the grocery list
         print("\n" + "=" * 30 + "  SEARCH RESULTS  " + "=" * 30 + "\n")
 
         for item in self.grocery_items:
-            print(f"[Search] {item['original_query'].title()}")
+            print(f"[Search] {item['original_query'].title()} ({item['items_matched']} Results)")
             print(f"    Revised Search: {item['revised_query']}")
 
             if item['store'] != 'None':
+                # Print details of the matched item
                 print(f"    Matched Item: {item['name']}")
-                print(f"    Stores Searched: {', '.join(item['stores_searched'])}")
+                print(f"    Local Stores Searched: {', '.join(item['stores_searched'])}")
                 print(f"    --> Store Selected: {item['store']}")
                 print(f"    --> Price: {'$' + format(item['price'], '.2f') if item['price'] else 'N/A'}")
                 print(f"    --> Size: {item['size']}")
@@ -381,10 +401,12 @@ class GroceryPriceFinder:
                     valid_until = datetime.strptime(item['valid_until'][:10], "%Y-%m-%d").strftime("%Y-%m-%d")
                     print(f"    --> Valid Until: {valid_until}")
             else:
+                # Print message if no item was matched
                 print("    Matched Item: None")
-                print(f"    Stores Searched: {', '.join(item['stores_searched']) if item['stores_searched'] else 'None'}")
+                print(f"    Local Stores Searched: {', '.join(item['stores_searched']) if item['stores_searched'] else 'None'}")
                 print("    --> Message: No valid items found.")
 
+            # Print alternative items if available
             if item['alternatives']:
                 top_5_alternatives = item['alternatives'][:5]
                 print(f"    Alternatives: {', '.join(top_5_alternatives)}")
@@ -394,6 +416,7 @@ class GroceryPriceFinder:
         print("=" * 79)
 
     def save_json_response(self, query, data):
+        # Save the API response data to a JSON file for debugging
         filename = f"responses/{query.replace(' ', '_')}.json"
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         with open(filename, 'w') as f:
@@ -401,6 +424,7 @@ class GroceryPriceFinder:
         logging.info(f"Saved JSON response to {filename}")
 
     def log_api_interaction(self, interaction_type, content):
+        # Log the interaction with the backend API to a log file
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_entry = f"[{timestamp}] {interaction_type}:\n{content}\n{'='*50}\n"
 
@@ -408,11 +432,13 @@ class GroceryPriceFinder:
             log_file.write(log_entry)
 
 if __name__ == "__main__":
+    # Main script entry point
     zip_code = os.getenv("POSTAL_CODE")
     if not zip_code:
         zip_code = input("Enter your postal code or zip code:\n")
     grocery_list = input("Enter your grocery list (you can be as detailed as you like):\n")
 
+    # Create an instance of GroceryPriceFinder and process the grocery list
     finder = GroceryPriceFinder(zip_code, grocery_list)
     finder.process_grocery_list()
     finder.print_grocery_items()
